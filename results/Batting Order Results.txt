@@ -1,0 +1,9 @@
+-----Question-----
+
+Does batting order matter and what are the most advantageous spots in the lineup to put your best hitters?
+
+-----Methodology and Process-----
+
+1.) Utilized the statcast pitch-level database to access every pitch for all games in the 2019 MLB season
+2.) Applied logic to determine the batter's position in the order and number of times they came to the plate
+3.) Eliminated pitches that did not result in a ball in play or were sacrifice situations
