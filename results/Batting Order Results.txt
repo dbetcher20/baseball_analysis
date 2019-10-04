@@ -7,3 +7,88 @@ Does batting order matter and what are the most advantageous spots in the lineup
 1.) Utilized the statcast pitch-level database to access every pitch for all games in the 2019 MLB season
 2.) Applied logic to determine the batter's position in the order and number of times they came to the plate
 3.) Eliminated pitches that did not result in a ball in play or were sacrifice situations
+4.) Determined that On-Base Percentage would be the best variable to gauge success of a plate appearance
+
+-----Results-----
+
+1.) Determined that over the course of a season the batter in the first position receives 2.5% more opportunities 
+    than the second position hitter, 10% more opportunities than the fifth position hitter, and 25% more 
+    opportunities than the ninth position hitter.
+2.) With respect to OBP, the best performing batting order position was the second spot, sporting a .353 OBP. The 
+    ranking of best performing batting order position is as follows: 2nd, 3rd, 4th, 1st, 5th, 6th, 7th, 8th, 9th.
+3.) With respect to OBP, players generally perform better the more times they bat in the same game. For example,
+    batters' OBP on their first plate appearance of the game was .318 but their OBP on the fourth plate appearance 
+    was .333, an improvement of 5%.
+4.) The below table shows the most common position to face a situation. Read as out of all the positions that face
+    Bases Loaded with 2 Outs, the 6th hitter comes across that situation most frequently.
+			0	1	2
+Bases Empty		1st	2nd	3rd
+Bases Loaded		4th	5th	6th
+Runner On 1st		2nd	3rd	4th
+Runner On 2nd		2nd	3rd	4th
+Runner On 2nd/3rd	3rd	4th	1st
+Runner On 3rd		2nd	3rd	4th
+Runners On 1st/2nd	3rd	4th	5th
+Runners On 1st/3rd	3rd	4th	5th
+
+5.) The below table shows the expected runs scored (eRS) at the beginning of the situation, per Fangraphs
+    Sabermetrics Library.
+			0	1	2
+Bases Empty		0.461	0.243	0.095
+Bases Loaded		2.282	1.52	0.736
+Runner On 1st		0.831	0.489	0.214
+Runner On 2nd		1.068	0.644	0.305
+Runner On 2nd/3rd	1.92	1.352	0.57
+Runner On 3rd		1.426	0.865	0.413
+Runners On 1st/2nd	1.373	0.908	0.343
+Runners On 1st/3rd	1.798	1.14	0.471
+
+6.) The below table is the total eRS for position based on their proprtion of facing each situation.
+			1st	2nd	3rd	4th	5th	6th	7th	8th	9th
+Bases Empty		0.58	0.49	0.46	0.50	0.51	0.50	0.51	0.51	0.53
+Bases Loaded		0.07	0.06	0.07	0.09	0.10	0.09	0.08	0.09	0.09
+Runner On 1st		0.19	0.33	0.32	0.26	0.26	0.29	0.27	0.26	0.24
+Runner On 2nd		0.12	0.16	0.16	0.14	0.13	0.13	0.14	0.14	0.14
+Runner On 2nd/3rd	0.06	0.05	0.06	0.07	0.06	0.06	0.06	0.06	0.07
+Runner On 3rd		0.04	0.05	0.05	0.05	0.04	0.04	0.04	0.04	0.04
+Runners On 1st/2nd	0.11	0.11	0.18	0.19	0.16	0.15	0.17	0.16	0.14
+Runners On 1st/3rd	0.05	0.05	0.07	0.09	0.07	0.07	0.07	0.07	0.06
+TOTAL			1.23	1.29	1.38	1.39	1.35	1.34	1.33	1.33	1.31
+
+-----Summary-----
+
+1.) The results of the OBP performance rankings by batting order position aligns with the generally accepted
+    theory that your best hitters hit higher up in the lineup. The only position out of order was the leadoff
+    hitter, who does not perform nearly as well as this strategy would assume.
+2.) When looking at the expected run table and cross referencing with the most common position to face situations
+    table, we notice a few things. The most advantageous situations for an offense to be in are the following: 
+    Based Loaded 0 Outs (2.2 eRS), Runners On 2nd/3rd 0 Outs (1.9 eRS), Runners On 1st/3rd 0 Outs (1.8 eRS), 
+    Bases Loaded 1 Out (1.5 eRS). The positions that face these top four positions most often are 4th, 3rd, 3rd,
+    5th, respectively.
+
+-----Takeaway-----
+1.) Overall, it would seem apparent that your best hitters should be in the 1st - 5th batting positions. Using a 
+    combination of the eRS table and the common position situation table, we are able to calculate that the 4th
+    position has the highest eRS across all situations over the course of a season. The total eRS table offers us 
+    a different perspective on the 2nd position, suggesting that the 2nd position does not have enough opportunity
+    to attain RBIs due to a lack of baserunners ahead of him.
+2.) Given that the 4th position creates the most runs based on the situations it ends up facing, the risk of putting
+    your best hitter here, instead of 3rd, is missing out on an additional 15 plate appearances throughout the course
+    of a season. This may be acceptable over the course of a season but in a playoff series, it would be advantageous
+    to move your best hitter to the 3rd position.
+3.) With consideration to roster construction: the 1st position should be a very high walk player in order to generate
+    quadruple the eRS for the 2nd position early in the game, the 2nd position should be your third or fourth best
+    hitter due to the fact that he will face less opportunities to create RBIs, the 3rd position should be your second
+    best hitter, the 4th position should be your best power hitter, and the remaining positions should be filled out
+    in descending talent order with the exception of the 9th position being a high walk player in order to better set 
+    up the top of the order hitters for higher eRS situations.
+4.) Using the 2019 Chicago Cubs as an example, here is the most optimized lineup for their hitters:
+    1st: Ben Zobrist
+    2nd: Kris Bryant
+    3rd: Anthony Rizzo
+    4th: Kyle Schwarber
+    5th: Willson Contreras
+    6th: Javier Baez
+    7th: David Bote
+    8th: Pitcher
+    9th: Ian Happ
